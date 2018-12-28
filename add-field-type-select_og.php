@@ -3,6 +3,8 @@
  * Type: Code snippet for woocommerce. Can be added to function.php file of the active child theme (or active theme) or in any plugin file.
  * Description: Add Select field with option group new form field type "select_og" to WooCommerce available form field types.
  * Author: LoicTheAztec
+ *
+ * Field type: select_og
  */
 add_filter('woocommerce_form_field_select_og', 'add_form_field_type_select_with_option_group', 10, 4 );
 function add_form_field_type_select_with_option_group( $field, $key, $args, $value ) {
