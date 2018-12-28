@@ -2,7 +2,7 @@ Add select field with optgroup new field type to WooCommerce form fields
 
 The options should be a multidimensional array like:
 
-<code>
+<code><pre>
 $options = [
     __("Option group Label 1") => [
         'option-1' 	=> __("Label 1"),
@@ -20,4 +20,4 @@ $options = [
         'option-9' 	=> __("Label 9"),
     ],
 ];
-</code>
+</pre></code>
