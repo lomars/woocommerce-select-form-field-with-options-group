@@ -22,9 +22,9 @@ The select options should be a multidimensional array like:
 ];
 </code></pre>
 
-<strong>USAGE example code snippet on Woocommerce checkout billing fields:</strong>
-
 <img src="checkout-billing-form-field.png" />
+
+<strong>USAGE example code snippet on Woocommerce checkout billing fields:</strong>
 
 <pre><code>add_filter('woocommerce_checkout_fields', 'checkout_select_field_with_optgroup', 10, 1 );
 function checkout_select_field_with_optgroup( $fields ) {
