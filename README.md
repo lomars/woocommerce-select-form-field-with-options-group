@@ -55,5 +55,6 @@ function checkout_select_field_with_optgroup( $fields ) {
     
     return $fields;
 }
-?>
 </code></pre>
+
+
