@@ -5,13 +5,13 @@ The select options should be a multidimensional array like:
 <pre><code>$options = [
     __("Option group Label 1") => [
         'option-1' 	=> __("Label 1"),
-		    'option-2' 	=> __("Label 2"),
+	'option-2' 	=> __("Label 2"),
     ],
     __("Option group Label 2") => [
         'option-3' 	=> __("Label 3"),
         'option-4' 	=> __("Label 4"),
         'option-5' 	=> __("Label 5"),
-        'option-6' 	=> __("Label 6", $domain),
+        'option-6' 	=> __("Label 6"),
     ],
     __("Option group Label 3")  => [
         'option-7' 	=> __("Label 7"),
@@ -29,13 +29,13 @@ function checkout_select_field_with_optgroup( $fields ) {
 	$options = [
 	    __("Option group Label 1") => [
 	        'option-1' 	=> __("Label 1"),
-			    'option-2' 	=> __("Label 2"),
+		'option-2' 	=> __("Label 2"),
 	    ],
 	    __("Option group Label 2") => [
 	        'option-3' 	=> __("Label 3"),
 	        'option-4' 	=> __("Label 4"),
 	        'option-5' 	=> __("Label 5"),
-	        'option-6' 	=> __("Label 6", $domain),
+	        'option-6' 	=> __("Label 6"),
 	    ],
 	    __("Option group Label 3")  => [
 	        'option-7' 	=> __("Label 7"),
