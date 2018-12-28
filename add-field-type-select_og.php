@@ -64,16 +64,18 @@ function add_form_field_type_select_with_option_group( $field, $key, $args, $val
                     $args['placeholder'] = $option_values ? $option_values : __( 'Choose an option', 'woocommerce' );
                 }
                 $custom_attributes[] = 'data-allow_clear="true"';
+
+                $options .= '<option value="' . esc_attr( $option_group ) . '">' . esc_attr( $option_values ) . '</option>';
+            } else {
+	            $options .= '<optgroup label="'. esc_attr( $option_group ) . '">';
+
+				// Second loop: Options in an otion group
+				foreach ( $option_values as $option_key => $option_text ) {
+	            	$options .= '<option value="' . esc_attr( $option_key ) . '" ' . selected( $value, $option_key, false ) . '>' . esc_attr( $option_text ) . '</option>';
+	            }
+
+	            $options .= '</optgroup>';
             }
-
-            $options .= '<optgroup label="'. esc_attr( $option_group ) . '">';
-
-			// Second loop: Options in an otion group
-			foreach ( $option_values as $option_key => $option_text ) {
-            	$options .= '<option value="' . esc_attr( $option_key ) . '" ' . selected( $value, $option_key, false ) . '>' . esc_attr( $option_text ) . '</option>';
-            }
-
-            $options .= '</optgroup>';
         }
 
         $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '">
