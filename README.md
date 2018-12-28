@@ -3,6 +3,7 @@
 The select options should be a multidimensional array like:
 
 <pre><code>$options = [
+    '' => __("Choose an option…"),
     __("Option group Label 1") => [
         'option-1' 	=> __("Label 1"),
 	'option-2' 	=> __("Label 2"),
@@ -27,6 +28,7 @@ The select options should be a multidimensional array like:
 function checkout_select_field_with_optgroup( $fields ) {
 	
 	$options = [
+            '' => __("Choose an option…"),
 	    __("Option group Label 1") => [
 	        'option-1' 	=> __("Label 1"),
 		'option-2' 	=> __("Label 2"),
