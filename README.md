@@ -2,9 +2,7 @@
 
 The select options should be a multidimensional array like:
 
-<pre><code>
-<?php
-$options = [
+<pre><code>$options = [
     __("Option group Label 1") => [
         'option-1' 	=> __("Label 1"),
 		    'option-2' 	=> __("Label 2"),
@@ -25,9 +23,7 @@ $options = [
 
 <strong>USAGE example code snippet on Woocommerce checkout billing fields:</strong>
 
-<pre><code>
-<?php
-add_action('woocommerce_checkout_fields', 'checkout_select_field_with_optgroup', 10, 1 );
+<pre><code>add_action('woocommerce_checkout_fields', 'checkout_select_field_with_optgroup', 10, 1 );
 function checkout_select_field_with_optgroup( $fields ) {
 	
 	$options = [
